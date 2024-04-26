@@ -977,24 +977,21 @@
   }
   .databaseIn_group {
     display: flex;
-    justify-content: space-between;
-    @include screen('mobile') {
+    justify-content: center;
+
+    @include screen('tablet') {
       flex-wrap: wrap;
     }
-
     .database_list {
-      flex: 1 1 auto;
-      flex-basis: 31%;
-      max-width: 31%;
-      // margin: 0 1.16%;
+      flex: 1 0 auto;
+      flex-basis: 32%;
+      // max-width: 32%;
+      margin: 0 0.67%;
       background-color: #f5f5f5;
       padding: 1.5em;
       line-height: 1.8em;
       text-align: left;
-      @include screen('mobile') {
-        flex-basis: 23%;
-        max-width: 23%;
-      }
+
       span {
         display: block;
         width: 96px;
@@ -1002,6 +999,280 @@
         margin: 0 auto 1em;
         background-color: #f4d4a8;
         border-radius: 50%;
+      }
+      @include screen('tablet') {
+        flex-basis: 48%;
+        // max-width: 48%;
+
+        margin: 0 1% 1em;
+      }
+      @include screen('mobile') {
+        flex-basis: 100%;
+        max-width: 100%;
+        margin: 0 0 1em;
+      }
+    }
+  }
+}
+// 資料來源
+.datasource_block {
+  margin-bottom: 2em;
+  .datasource_group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .datasource_list {
+      flex: 0 0 auto;
+      flex-basis: 32%;
+      max-width: 32%;
+      margin: 0 0.66% 1em;
+      padding: 1.5em;
+      background-color: #f4d4a8;
+      @include screen('tablet') {
+        flex-basis: 48%;
+        max-width: 48%;
+        margin: 0 1% 1em;
+      }
+      @include screen('mobile') {
+        flex-basis: 100%;
+        max-width: 100%;
+        margin: 0 0 1em;
+      }
+      .title {
+        color: $primaryColor;
+        text-align: center;
+        margin-bottom: 0.5em;
+        font-size: 1.125em;
+        font-weight: bold;
+      }
+      p {
+        @include text-line(3, 1.8em);
+      }
+      .more {
+        display: flex;
+        justify-content: flex-end;
+        a {
+          flex-basis: 150px;
+          max-width: 150px;
+          padding: 0.5em;
+          display: block;
+          width: 150px;
+          position: relative;
+          background-color: $primaryColor;
+          color: #fff;
+          text-align: center;
+          &:after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border: 2px solid #fff;
+            border-left: none;
+            border-bottom: none;
+            position: absolute;
+            right: 20px;
+            top: 18px;
+            transform: rotate(45deg);
+            transition: 0.5s;
+            background-image: none;
+          }
+
+          &:hover {
+            background-color: darken($color: $primaryColor, $amount: 5);
+            &:after {
+              content: '';
+              right: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 建置過程
+.buildproces_block {
+  margin-bottom: 2em;
+  .buildproces_group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .buildproces_list {
+      flex: 0 0 auto;
+      flex-basis: 28%;
+      max-width: 28%;
+      margin: 0 2.66% 1em;
+      padding: 1em 1em 1em 1.5em;
+      background-color: #ececec;
+      border-left: 5px solid $primaryColor;
+      position: relative;
+      &:after {
+        content: '';
+        width: 20px;
+        height: 20px;
+        border: 1px solid $primaryColor;
+        border-color: $primaryColor $primaryColor transparent transparent;
+        display: block;
+        position: absolute;
+        right: -10%;
+        top: 50%;
+        transform: translate(0, -50%) rotate(45deg);
+      }
+
+      &:last-of-type {
+        &:after {
+          display: none;
+        }
+      }
+
+      @include screen('mobile') {
+        flex-basis: 100%;
+        max-width: 100%;
+        margin: 0 0 2.5em;
+        &:after {
+          border: 1px solid $primaryColor;
+          border-color: transparent $primaryColor $primaryColor transparent;
+          position: absolute;
+          right: auto;
+          top: auto;
+          bottom: -1.5em;
+          left: 50%;
+          transform: translate(-50%, 0) rotate(45deg);
+        }
+      }
+      .date {
+        color: $primaryColor;
+        margin-bottom: 0.5em;
+        font-size: 1.063em;
+        font-weight: bold;
+      }
+      p {
+        @include text-line(3, 1.8em);
+        margin-bottom: 0;
+        @include screen('mobile') {
+          text-overflow: initial;
+          -webkit-line-clamp: initial;
+          height: auto;
+        }
+      }
+      .more {
+        display: flex;
+        justify-content: flex-end;
+        a {
+          flex-basis: 150px;
+          max-width: 150px;
+          padding: 0.5em;
+          display: block;
+          width: 150px;
+          position: relative;
+          background-color: $primaryColor;
+          color: #fff;
+          text-align: center;
+          &:after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border: 2px solid #fff;
+            border-left: none;
+            border-bottom: none;
+            position: absolute;
+            right: 20px;
+            top: 18px;
+            transform: rotate(45deg);
+            transition: 0.5s;
+            background-image: none;
+          }
+
+          &:hover {
+            background-color: darken($color: $primaryColor, $amount: 5);
+            &:after {
+              content: '';
+              right: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 編碼說明
+.codingexplain_block {
+  line-height: 1.8em;
+  margin-bottom: 1em;
+  background-color: #ad633a;
+  color: #fff;
+  padding: 1.5em 12em 1.5em 2em;
+  background-image: url('../images/codingexplain_bg.jpg');
+  background-position: right top;
+  background-repeat: no-repeat;
+  @media (max-width: 650px) {
+    padding: 9em 1.5em 1.5em 1.5em;
+    background-size: 300px;
+  }
+  .title {
+    font-weight: bold;
+  }
+  ul {
+    margin: 0.5em 0 0 1.5em;
+    padding: 0;
+    li {
+      margin-bottom: 0.3em;
+    }
+  }
+}
+.coding_group {
+  padding: 1.5em 2em;
+  background-color: #f5f5f5;
+  color: #333;
+  p {
+    margin: 0 0 1em;
+    padding: 0;
+    line-height: 1.8em;
+  }
+  .coding_box {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    @include screen('xs_mobile') {
+      display: block;
+      .coding_pic {
+        margin-right: 0;
+        margin-bottom: 1em;
+      }
+    }
+    .coding_pic {
+      flex: 0 0 auto;
+      flex-basis: 64px;
+      margin-right: 2em;
+
+      img {
+        width: 64px;
+        height: 64px;
+      }
+    }
+    .content {
+      flex: 1 1 auto;
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li {
+          margin-bottom: 0.5em;
+          padding: 0 0 0 1.5em;
+          position: relative;
+          &:before {
+            content: '';
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            left: 0;
+            top: 5px;
+            background-image: url('../images/coding_icon.png');
+            background-repeat: no-repeat;
+            background-position: 0 0;
+          }
+        }
       }
     }
   }
