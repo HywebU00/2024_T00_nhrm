@@ -710,6 +710,13 @@
 .explain_block {
   line-height: 1.8em;
   margin-bottom: 1em;
+  ul {
+    margin: 0.5em 0 0 1.5em;
+    padding: 0;
+    li {
+      margin-bottom: 0.3em;
+    }
+  }
 }
 
 // 過濾條件
@@ -784,6 +791,178 @@
       padding: 4px 15px;
       border-radius: 0;
       margin: 0 0 5px;
+    }
+  }
+}
+
+.publish_info_out {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  font-size: 0.938em;
+  @include screen('tablet') {
+    position: relative;
+    flex: 1 1 auto;
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0 0 0.5em;
+    top: 0;
+    display: block;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      flex: 0 0 auto;
+      margin-right: 2em;
+      position: relative;
+      margin-bottom: 0.3em;
+      color: #333;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+// 資料庫介紹
+.introduce_title {
+  font-size: 1.125em;
+  padding: 0.5em 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+// 階段性
+.stage_block {
+  margin-bottom: 1em;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    @include screen('mobile') {
+      display: block;
+    }
+    li {
+      flex: 1 1 auto;
+      padding: 1em 0.5em 1em 1.5em;
+      background: rgb(218, 128, 72);
+      background: linear-gradient(90deg, rgba(218, 128, 72, 1) 0%, rgba(241, 192, 126, 1) 100%);
+      text-shadow: 0 0 6px #333;
+      color: #fff;
+      text-align: center;
+      position: relative;
+      &:after {
+        content: '';
+        border: 30px solid #f1c07e;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        position: absolute;
+        right: -60px;
+        top: 0;
+        z-index: 1;
+      }
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+
+      &.first_stage {
+        background: rgb(253, 81, 0);
+        background: linear-gradient(90deg, rgba(253, 81, 0, 1) 0%, rgba(204, 1, 0, 1) 100%);
+        &:after {
+          border: 30px solid #cc0100;
+          border-top-color: transparent;
+          border-right-color: transparent;
+          border-bottom-color: transparent;
+        }
+      }
+      @media (max-width: 900px) {
+        padding: 1em 0.5em;
+        &:after {
+          content: '';
+          border: 12px solid #f1c07e;
+          border-top-color: transparent;
+          border-right-color: transparent;
+          border-bottom-color: transparent;
+          position: absolute;
+          right: -24px;
+          top: 5px;
+          z-index: 1;
+        }
+        &.first_stage {
+          &:after {
+            border: 12px solid #cc0100;
+            border-top-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+          }
+        }
+      }
+      @include screen('mobile') {
+        background: rgb(218, 128, 72);
+        background: linear-gradient(180deg, rgba(218, 128, 72, 1) 0%, rgba(241, 192, 126, 1) 100%);
+        &:after {
+          content: '';
+          border: 12px solid #f1c07e;
+          border-left-color: transparent;
+          border-right-color: transparent;
+          border-bottom-color: transparent;
+          position: absolute;
+          right: 5px;
+          bottom: -24px;
+          top: auto;
+          z-index: 1;
+        }
+        &.first_stage {
+          background: rgb(253, 81, 0);
+          background: linear-gradient(180deg, rgba(253, 81, 0, 1) 0%, rgba(204, 1, 0, 1) 100%);
+          &:after {
+            content: '';
+            border: 12px solid #cc0100;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            position: absolute;
+            right: 5px;
+            bottom: -24px;
+            top: auto;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+  .stage_color {
+    margin: 0.5em 0;
+    span {
+      position: relative;
+      padding-left: 1em;
+      margin-right: 1em;
+      font-weight: bold;
+      &:before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        background: rgb(218, 128, 72);
+        background: linear-gradient(90deg, rgba(218, 128, 72, 1) 0%, rgba(241, 192, 126, 1) 100%);
+        text-shadow: 0 0 5px #666;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 8px;
+      }
+      &.first-stage {
+        &:before {
+          background: rgb(253, 81, 0);
+          background: linear-gradient(90deg, rgba(253, 81, 0, 1) 0%, rgba(204, 1, 0, 1) 100%);
+        }
+      }
     }
   }
 }

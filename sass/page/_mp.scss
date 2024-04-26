@@ -542,14 +542,16 @@ a.more {
       background-image: url('../images/flow_R.png');
       background-repeat: no-repeat;
       background-position: left top;
-      transition: 0.5s;
-      overflow: hidden;
       @media (max-width: 1400px) {
-        width: calc(50vw - 700px + 378px);
-        // width: calc(478px - 50vw - 350px);
-        // width: 378px;
-
-        right: calc(50vw - 700px);
+        width: calc(50vw - 600px + 378px);
+        right: calc((50vw - 600px) * -1);
+      }
+      @media (max-width: 1200px) {
+        width: 378px;
+        right: 0;
+      }
+      @include screen('mobile') {
+        display: none;
       }
 
       &:before,
