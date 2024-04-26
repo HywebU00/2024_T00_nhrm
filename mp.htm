@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+  <meta name="robots" content="noindex" />
+  <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>臺灣轉型正義資料庫</title>
+  <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+  <!-- 燈箱facybox -->
+  <link rel="stylesheet" type="text/css" href="vendor/fancybox/fancybox.css">
+  <!-- WOW動畫-->
+  <link href="css/animate.css" rel="stylesheet" />
+  <!-- hyUI css -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- favicon -->
+  <link href="images/favicon.png" rel="icon" type="image/x-icon" />
+
+</head>
+
+<body>
+  <!-- 直接跳主內容區 -->
+  <a class="goCenter" href="#aC" tabindex="1">按Enter到主內容區</a>
+  <!-- wrapper Start -->
+  <div class="wrapper mpwrapper">
+    <!-- header Start -->
+    <header class="header ">
+      <div class="container">
+        <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+        <h1>
+          <a href="index.htm"><img src="images/logo.png" alt="網站標題" /></a>
+        </h1>
+        <!-- navigation Start -->
+        <nav class="navigation" role="navigation" aria-label="Site">
+          <!-- 新增div navlist -->
+          <div class="navlist">
+            <ul>
+              <li><a href="#">回首頁</a></li>
+              <li><a href="#">網站導覽</a></li>
+              <li><a href="#">相關連結</a></li>
+            </ul>
+          </div>
+          <!-- font_size -->
+          <div class="font_size_block">
+            <button type="button" class="fontsize_btn">A</button>
+            <div class="font_size_list">
+              <ul>
+                <li><a href="#" role="button" class="small">小</a></li>
+                <li><a href="#" role="button" class="medium">中</a></li>
+                <li><a href="#" role="button" class="large">大</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </nav>
+        <!-- navigation End -->
+
+        <!-- noscript -->
+        <noscript>
+          您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結
+          <a href="#">網站導覽</a>
+        </noscript>
+        <!-- menu Start -->
+        <nav class="menu" role="navigation" aria-label="About page">
+          <ul>
+            <li><a href="#">資料庫介紹</a></li>
+            <li><a href="http://www.google.com">使用說明</a></li>
+            <li><a href="http://www.google.com">資料查詢</a></li>
+            <li><a href="#">視覺化查詢</a> </li>
+            <li><a href="#">資料分析</a></li>
+            <li><a href="#">常見問答</a></li>
+            <li><a href="#">最新公告</a></li>
+          </ul>
+        </nav>
+        <!-- menu End -->
+      </div>
+    </header>
+    <!-- header End -->
+    <!-- main Start -->
+    <div id="aC" class="main">
+      <a class="accesskey" href="#ac" id="ac" accesskey="C" title="主要內容區">:::</a>
+      <!-- 任何一個section下一層都要包下一層都要包div container作對齊 -->
+      <!-- //// class 都可以隨意命名 !!! ///// -->
+      <!-- 查詢資料 -->
+      <section class="infoSearch_mpblock col-12">
+        <div class="container">
+          <div class="col">
+            <!-- start -->
+            <div class="tabSet">
+              <!-- 頁籤的上一層父物件要加 role="tablist" -->
+              <div class="tabItems">
+                <button type="button" class="tabBtn">資料查詢</button>
+                <button type="button" class="tabBtn">視覺化查詢</button>
+              </div>
+              <div class="tabContentGroup">
+                <div class="tabContent">
+                  <div class="content">
+                    <div class="searchgroup wow fadeIn" data-wow-duration="2s" data-wow-delay="0s">
+                      <div class="flex-form form_grid">
+                        <div class="form_grp">
+                          <div class="form_content  formflex">
+                            <input name="phone" id="phone" type="text" title="請輸入檢索詞" placeholder="請輸入檢索詞" />
+                            <select id="selectSample" name="" class="fieldlong">
+                              <option value="">不限欄位</option>
+                              <option value="">書目資料</option>
+                              <option value="">章節名稱</option>
+                              <option value="">全文內容</option>
+                            </select>
+                            <button type="button" class="add">增加</button>
+                          </div>
+                        </div>
+
+                        <div class="form_grp">
+                          <div class="form_content  formflex">
+                            <select id="selectSample" name="" class="fieldshort">
+                              <option value="">AND</option>
+                              <option value="">OR</option>
+                              <option value="">NOT</option>
+                            </select>
+                            <input name="phone" id="phone" type="text" title="請輸入檢索詞" placeholder="請輸入檢索詞" />
+                            <select id="selectSample" name="" class="fieldlong">
+                              <option value="">受裁判人/當事人</option>
+                              <option value="">書目資料</option>
+                              <option value="">章節名稱</option>
+                              <option value="">全文內容</option>
+                            </select>
+                            <button type="button" class="del">刪除</button>
+                          </div>
+                        </div>
+                        <div class="form_grp" role="group" aria-labelledby="fake-legend">
+                          <div class="form_content" id="fake-legend">
+                            <div class="keyword_reference">
+                              <div class="title">關鍵字參考：</div>
+                              <ul>
+                                <li><a href="#">美麗島</a></li>
+                                <li><a href="#">丁窈窕</a></li>
+                                <li><a href="#">施水環</a></li>
+                                <li><a href="#">施明德</a></li>
+                                <li><a href="#">雷震</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="btn_grp form_inline">
+                          <button type="button" class="btn btnSubmit"><span>查詢</span></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabContent">
+                  <div class="content">
+                    <div class="visualquery_group">
+                      <div class="pic"><img src="images/search_picture01.jpg" alt=""></div>
+                      <div class="clicksteps steps01">1.點擊統計圖表上的分類</div>
+                      <div class="clicksteps steps02">2.立即產生屬性過濾的互動效果</div>
+                      <div class="clicksteps steps03">3.查看名單可檢視受裁判人/當事人資料</div>
+                    </div>
+                    <div class="more"><a href="#">試試看視覺化查詢</a></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!-- end -->
+          </div>
+        </div>
+      </section>
+      <!-- mpbanner -->
+      <section class="mpbanner_block col-12 ">
+        <div class="container">
+          <div class="col">
+            <div class="mpbanner_group">
+              <div class="title ">TAIWAN TRANSITIONAL JUSTICE</div>
+            </div>
+            <div class="flower L wow fadeInUp" data-wow-delay=".45s"></div>
+            <div class="flower R wow fadeInUp" data-wow-delay=".45s"></div>
+          </div>
+        </div>
+      </section>
+      <!-- 建置資料庫目的 -->
+      <section class="buildDatabase_block col-12 ">
+        <div class="container">
+          <div class="col">
+            <!-- 建置資料 -->
+            <div class="buildDatabase_group">
+              <h2 class="mptitle">建置資料庫目的</h2>
+              <div class="content">
+                <p>過去在威權統治時期（1945.08.15-1992.11.06），政府為達成鞏固威權統治之目的，透過鎮壓、軍事審判等方式迫害人權，由此產生大量違反自由民主憲政秩序、侵害公平審判原則所追訴或審判之刑事案件，以及侵害人民生命、人身自由或剝奪其財產所有權之處分或事實行為。</p>
+                <p>
+                  為了釐清與還原人權受迫害之歷程，2019年促進轉型正義委員會以軍事審判為核心，爬梳與檢視審判過程中產生之相關檔案文件內容建置此資料庫，建置臺灣轉型正義資料庫；現由國家人權博物館擴編資料庫內容，在軍事審判階段以外納入審判前、審判後人身自由受限等人權受侵害情況，透過參照公告平復之司法不法及行政不法之相關檔案文件內容，據以整理案件審理或人身自由受限等案件流程之梗概，供社會大眾查詢使用。
+                </p>
+                <div class="more"><a href="#">更多資料庫介紹</a></div>
+              </div>
+            </div>
+            <!-- 統計分析 -->
+            <div class="casesTatistics_group">
+              <h2 class="mptitle">收錄案件統計分析</h2>
+              <div class="casenumber">
+                <div class="title">案件收錄筆數<span>15,110</span></div>
+                <p>本資料庫收錄政治案件當事人統計資料是以取得「判決書」或「人身自由受限」佐證資料者為母體。</p>
+              </div>
+              <div class="caseinformation_group">
+                <div class="col">
+                  <div class="title">受裁判人/當事人年齡</div>
+                  <p>政治案件當事人受起訴、審判或受難的年齡平均約為33歲，當事人最小年齡為11歲(1名)，最年長為84歲(2名)。政治案件當事人年齡分布如圖下，主要年齡層集中在19至29歲之間<span><a href="#" data-fancybox data-src="#modal">更多說明</a></span></p>
+                  <!-- 燈箱 start-->
+                  <div class="lightboxblock" id="modal">
+                    <div class="lightbox_title">詳細說明</div>
+                    <div class="content">
+                      <p>政治案件當事人受起訴、審判或受難的年齡平均約為33歲，當事人最小年齡為11歲(1名)，最年長為84歲(2名)。政治案件當事人年齡分布如圖下，主要年齡層集中在19至29歲之間，占總當事人約51.2%，其次為30至39歲占約27.7%，第三為40至49歲約占11.8%。另外，政治案件當事人被起訴時或受難時年齡在18歲以下者，共有381人，約占5.6%
+                      </p>
+
+                    </div>
+                  </div>
+                  <!-- 燈箱 end-->
+                  <figure class="highcharts-figure">
+                    <div id="containerA"></div>
+                  </figure>
+                </div>
+                <div class="col">
+                  <div class="title">受裁判人/當事人年齡</div>
+                  <p>政治案件當事人最多從事職業類型為「無正式工作者」，占＿%，其次為「基層技術工及勞力工」，占＿%，第三為「事務支援人員」占＿%，第四為「農、林、漁、牧業<span><a href="#" data-fancybox data-src="#modal">更多說明</a></span></p>
+                  <figure class="highcharts-figure">
+                    <div id="containerB"></div>
+                  </figure>
+                </div>
+                <div class="col">
+                  <div class="title">受裁判人/當事人年齡</div>
+                  <p>以本資料庫收錄之當事人的政治案件為母體（人次），受難情形包含政治案件的受裁判人的判決結果，或遭受國家行政不法行為之被害情況。</p>
+                  <figure class="highcharts-figure">
+                    <div id="containerC"></div>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- footer Start-->
+    <footer>
+      <div class="container">
+        <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+        <div class="footer_leftblock">
+          <div class="footer_logo">
+            <img src="images/footer_logo.png" alt="" class="img-responsive" />
+          </div>
+          <div class="footer_info">
+            <!-- 
+            <p class="Copyright">Hyweb Technology Co., Ltd.© 2015 All Rights Reserved</p> -->
+            <p>
+              聯絡電話：02-22182438<br />
+              傳真號碼：02-22182436 <br />
+              聯絡信箱：tjcdbservice@nhrm.gov.tw <br />
+              23150 新北市新店區復興路131號
+            </p>
+            <ul class="footer_link">
+              <li><a href="javascript:;">【隱私與安全政策】</a></li>
+            </ul>
+            <span class="update">更新日期：<em>2023-10-11</em></span>
+            <span class="counter">瀏覽人次：<em>46476653</em></span>
+          </div>
+        </div>
+        <div class="footer_rightblock">
+          <div class="footer_icon">
+            <a target="_blank" href="javascript:;">
+              <img src="images/basic/accessibility_aa.png" alt="通過AA優先等級無障礙網頁檢測,另開新視窗" />
+            </a>
+            <a target="_blank" href="javascript:;">
+              <img src="images/basic/egov.png" alt="我的e政府,另開新視窗" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer End -->
+  </div>
+  <a href="javascript:;" class="scrollToTop">回頁首</a>
+  <!-- JQ -->
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <!-- ease -->
+  <script src="vendor/jquery.easing.min.js"></script>
+  <!-- slick -->
+  <script src="vendor/slick/slick.min.js "></script>
+  <!-- lazyload -->
+  <script src="vendor/lazyload/lazyload.js"></script>
+  <!-- scrolltable -->
+  <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
+  <!-- fancybox -->
+  <script src="vendor/fancybox/fancybox.umd.js"></script>
+  <script src="vendor/fancybox/l10n/zh_TW.umd.js"></script>
+  <!-- wow js -->
+  <script src="js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+  <script src="js/anime.min.js"></script>
+  <!-- highcharts -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/heatmap.js"></script>
+  <script src="https://code.highcharts.com/modules/treemap.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <!-- hyUI -->
+  <script src="js/main.js"></script>
+  <!-- 客製js -->
+  <script src="js/customize.js"></script>
+
+  <script>
+    // 圓圖
+    // Data retrieved from https://olympics.com/en/olympic-games/beijing-2022/medals
+    Highcharts.chart('containerA', {
+      chart: {
+        type: 'pie',
+        options3d: {
+          enabled: true,
+          alpha: 45
+        }
+      },
+      title: {
+        text: 'Beijing 2022 gold medals by country',
+        align: 'left'
+      },
+      subtitle: {
+        text: '3D donut in Highcharts',
+        align: 'left'
+      },
+      plotOptions: {
+        pie: {
+          innerSize: 100,
+          depth: 45
+        }
+      },
+      series: [{
+        name: 'Medals',
+        data: [
+          ['Norway', 16],
+          ['Germany', 12],
+          ['USA', 8],
+          ['Sweden', 8],
+          ['Netherlands', 8],
+          ['ROC', 6],
+          ['Austria', 7],
+          ['Canada', 4],
+          ['Japan', 3]
+
+        ]
+      }]
+    });
+    // 正方圖
+    Highcharts.chart('containerB', {
+      credits: {
+        enabled: false
+      },
+      series: [{
+        type: 'treemap',
+        layoutAlgorithm: 'squarified',
+        clip: false,
+        data: [{
+          name: '無',
+          value: 2032,
+          color: '#a87b52'
+        }, {
+          name: '商',
+          value: 1322,
+          color: '#e9a951'
+        }, {
+          name: '工',
+          value: 1313,
+          color: '#ee987f'
+        }, {
+          name: '農',
+          value: 1194,
+          color: '#dc4d2d'
+        }, {
+          name: '漁',
+          value: 1194,
+          color: '#65c0c5'
+        }, {
+          name: '陸軍步兵中校',
+          value: 1010,
+          color: '#5c9b66'
+        }, {
+          name: '無業',
+          value: 226,
+          color: '#8c817b'
+        }, {
+          name: '司機',
+          value: 187,
+          color: '#956fc4'
+        }, {
+          name: '學生',
+          value: 174,
+          color: '#fa4862'
+        }, {
+          name: '教員',
+          value: 111,
+          color: '#396d9f'
+        }]
+      }],
+      title: {
+        text: ''
+      }
+    });
+    // 長條圖
+    Highcharts.chart('containerC', {
+      chart: {
+        type: 'bar'
+      },
+      title: {
+        text: '',
+        align: 'center'
+      },
+      xAxis: {
+        type: 'category',
+        gridLineWidth: 0,
+        lineWidth: 1
+      },
+      yAxis: {
+        min: 0,
+        title: {
+          text: '人次',
+          align: 'high'
+        },
+        labels: {
+          overflow: 'justify'
+        },
+        gridLineWidth: 1
+      },
+      plotOptions: {
+        series: {
+          animation: false,
+          groupPadding: 0,
+          pointPadding: 0.1,
+          borderWidth: 0,
+          colorByPoint: true,
+          type: 'bar',
+          dataLabels: {
+            enabled: true
+          }
+        }
+      },
+      legend: {
+        enabled: false
+      },
+      series: [{
+        dataSorting: {
+          enabled: true,
+          sortKey: 'custom.value'
+        },
+        name: '人次',
+        data: [{
+          y: 1153,
+          custom: {
+            value: 10
+          },
+          name: '死刑',
+          color: "#8c817b"
+        },
+        {
+          y: 169,
+          custom: {
+            value: 9
+          },
+          name: '無期徒刑',
+          color: "#e9a951"
+        },
+        {
+          y: 425,
+          custom: {
+            value: 8
+          },
+          name: '有期徒刑15年以上',
+          color: "#a87b52"
+        },
+        {
+          y: 1628,
+          custom: {
+            value: 7
+          },
+          name: '有期徒刑10年以上未滿15年',
+          color: "#dc4d2d"
+        },
+        {
+          y: 1498,
+          custom: {
+            value: 6
+          },
+          name: '有期徒刑5年以上未滿10年',
+          color: "#ee987f"
+        },
+        {
+          y: 1021,
+          custom: {
+            value: 5
+          },
+          name: '有期徒刑未滿5年',
+          color: "#5c9b66"
+        },
+        {
+          y: 1744,
+          custom: {
+            value: 4
+          },
+          name: '感化(訓)教育',
+          color: "#3d6b9d"
+        },
+        {
+          y: 739,
+          custom: {
+            value: 3
+          },
+          name: '無罪',
+          color: "#65c0c5"
+        },
+        {
+          y: 348,
+          custom: {
+            value: 2
+          },
+          name: '不付軍事審判或公訴不受理',
+          color: "#966fc2"
+        },
+        {
+          y: 61,
+          custom: {
+            value: 1
+          },
+          name: '其他',
+          color: "#f94865"
+        }
+        ]
+      }]
+    });
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+.lightboxblock {
+  display: none;
+  width: 50vw;
+  height: auto;
+  max-height: 60vh;
+  @include screen('tablet') {
+    width: 70vw;
+    max-height: 60vh;
+  }
+  @include screen('mobile') {
+    width: 80vw;
+    max-height: 80vh;
+  }
+  @include screen('xs_mobile') {
+    width: 95vw;
+    max-height: 95vh;
+  }
+  &.fancybox__content {
+    padding: 0;
+  }
+  .lightbox_title {
+    background-color: #7f4e0f;
+    color: #fff;
+    padding: 0.8em 2em;
+    text-align: center;
+    font-size: 1.25em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+  }
+  .content {
+    color: #000;
+    padding: 1em;
+    overflow-y: auto;
+    height: 80%;
+    position: relative;
+    font-size: 1.125em;
+    p {
+      line-height: 1.8em;
+      margin: 0 0 1em;
+      padding: 0;
+    }
+    .export_format {
+      text-align: center;
+    }
+    button {
+      padding: 4px 15px;
+    }
+  }
+}
