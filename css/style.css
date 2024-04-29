@@ -1653,11 +1653,11 @@ kbd kbd {
   position: absolute;
   top: 30px;
   width: 50px;
-  display: none;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   background-color: #fff;
   padding: 0.5em;
   border-radius: 50px;
+  display: none;
 }
 @media screen and (max-width: 991px) {
   .font_size_block .font_size_list {
@@ -3302,7 +3302,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 @media screen and (max-width: 767px) {
   .header > .container {
-    padding-top: 10px;
+    padding-top: 0;
     padding-bottom: 0;
   }
 }
@@ -3372,10 +3372,13 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 @media screen and (max-width: 767px) {
   .header h1 {
-    padding: 2px 60px;
+    padding: 10px 60px 2px;
     width: 100%;
     text-align: center;
     height: 60px;
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
   }
   .header h1 img {
     width: auto;
@@ -7402,6 +7405,7 @@ table.table_sprite tr:nth-child(even) {
 }
 .sub_menu li a:hover, .sub_menu li a:focus {
   border: 1px solid #b71c1c;
+  border-left: 10px solid #b71c1c;
   color: #b71c1c;
 }
 .sub_menu li a:hover:before, .sub_menu li a:focus:before {
@@ -10186,6 +10190,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .file_download li .file_name ~ span {
   flex: 0 0 auto;
   margin: 0.2em;
+  margin-right: 1em;
   font-size: 0.875em;
   line-height: 1.5em;
   vertical-align: middle;

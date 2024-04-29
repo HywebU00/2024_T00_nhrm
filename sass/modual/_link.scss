@@ -76,6 +76,7 @@
       &:hover,
       &:focus {
         border: 1px solid $primaryColor;
+        border-left: 10px solid $primaryColor;
         color: $primaryColor;
         &:before {
           content: '';

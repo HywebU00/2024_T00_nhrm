@@ -105,11 +105,11 @@ kbd {
     position: absolute;
     top: 30px;
     width: 50px;
-    display: none;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     background-color: #fff;
     padding: 0.5em;
     border-radius: 50px;
+    display: none;
     @include screen('tablet') {
       width: 40px;
     }

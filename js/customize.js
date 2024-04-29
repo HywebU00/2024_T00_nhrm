@@ -302,17 +302,6 @@ $(function () {
 
 // font_size
 $(function () {
-  $('.font_size_block')
-    .find('.fontsize_btn')
-    .focusin(function () {
-      $('.font_size_list').slideDown();
-    });
-  $('.font_size_block')
-    .find('li:last-child>a:last-child')
-    .focusout(function () {
-      $('.font_size_list').slideUp();
-    });
-
   $('.font_size_block .fontsize_btn').on('click', function () {
     if ($('.font_size_list').is(':visible')) {
       $('.font_size_list').stop().slideUp();
@@ -320,6 +309,17 @@ $(function () {
       $('.font_size_list').stop().slideDown();
     }
   });
+
+  $('.font_size_block')
+    .find('li:last-child>a:last-child')
+    .focusout(function () {
+      $('.font_size_list').slideUp();
+    });
+  // $('.font_size_block')
+  //   .find('.fontsize_btn')
+  //   .focus(function () {
+  //     $('.font_size_list').slideDown();
+  //   });
 
   // 後分類
   var _sortlist = $('.searchresults_block .sortlist');
