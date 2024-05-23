@@ -9956,21 +9956,23 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.caseinformation_group .col {
-  flex: 0 0 auto;
+.caseinformation_group.twocases .col {
+  flex: 1 0 auto;
   flex-basis: 48%;
   max-width: 48%;
-  margin-bottom: 2em;
-}
-.caseinformation_group .col:last-of-type {
-  flex-basis: 100%;
-  max-width: 100%;
+  margin: 0 1% 2em;
 }
 @media screen and (max-width: 991px) {
-  .caseinformation_group .col {
+  .caseinformation_group.twocases .col {
     flex-basis: 100%;
     max-width: 100%;
   }
+}
+.caseinformation_group .col {
+  flex: 1 0 auto;
+  flex-basis: 100%;
+  max-width: 100%;
+  margin: 0 0 2em;
 }
 .caseinformation_group p {
   position: relative;

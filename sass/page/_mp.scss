@@ -676,19 +676,23 @@ a.more {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  &.twocases {
+    .col {
+      flex: 1 0 auto;
+      flex-basis: 48%;
+      max-width: 48%;
+      margin: 0 1% 2em;
+      @include screen('tablet') {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+  }
   .col {
-    flex: 0 0 auto;
-    flex-basis: 48%;
-    max-width: 48%;
-    margin-bottom: 2em;
-    &:last-of-type {
-      flex-basis: 100%;
-      max-width: 100%;
-    }
-    @include screen('tablet') {
-      flex-basis: 100%;
-      max-width: 100%;
-    }
+    flex: 1 0 auto;
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0 0 2em;
   }
   p {
     position: relative;
