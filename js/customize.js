@@ -358,4 +358,18 @@ $(function () {
         $('.searchresults_block .leftblock').stop().removeClass('open');
       }
     });
+
+  //顯示隱藏查詢條件
+
+  $('.searchquery_btn button').click(function () {
+    if ($('.searchgroup').is(':hidden')) {
+      $('.searchgroup').slideDown();
+      $('.searchquery_btn button span').text('隱藏查詢');
+      $('.searchquery_btn button').addClass('close');
+    } else {
+      $('.searchgroup').slideUp();
+      $('.searchquery_btn button span').text('顯示查詢');
+      $('.searchquery_btn button').removeClass('close');
+    }
+  });
 });

@@ -9390,6 +9390,30 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   position: relative;
 }
 
+.searchquery_btn button {
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+  border: none !important;
+  padding: 0.5em;
+  color: #fff !important;
+  background: #b71c1c !important;
+}
+.searchquery_btn button.close span {
+  background-image: url("../images/retrieve_del2.png");
+}
+.searchquery_btn button span {
+  padding: 0 0 0 30px;
+  background-image: url("../images/retrieve_add2.png");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  font-size: 1.125em;
+}
+.searchquery_btn + .searchgroup {
+  display: none;
+  background-color: #f8f8f4;
+}
+
 .searchgroup {
   position: relative;
 }

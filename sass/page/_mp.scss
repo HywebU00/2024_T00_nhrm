@@ -127,6 +127,34 @@ a.more {
     position: relative;
   }
 }
+// 檢索查詢按鈕
+.searchquery_btn {
+  button {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    border: none !important;
+    padding: 0.5em;
+    color: #fff !important;
+    background: $primaryColor !important;
+    &.close {
+      span {
+        background-image: url('../images/retrieve_del2.png');
+      }
+    }
+    span {
+      padding: 0 0 0 30px;
+      background-image: url('../images/retrieve_add2.png');
+      background-repeat: no-repeat;
+      background-position: 0 center;
+      font-size: 1.125em;
+    }
+  }
+  + .searchgroup {
+    display: none;
+    background-color: #f8f8f4;
+  }
+}
 .searchgroup {
   position: relative;
   &:before {
