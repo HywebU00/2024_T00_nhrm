@@ -1245,7 +1245,7 @@ th {
 }
 
 .cp {
-  line-height: 1.65em;
+  line-height: inherit;
 }
 @media screen and (max-width: 575px) {
   .cp {
@@ -7354,7 +7354,7 @@ table.table_sprite tr:nth-child(even) {
 }
 .sub_menu li a {
   border-radius: 0;
-  border: 1px solid #666;
+  border: 1px solid #ccc;
   padding: 1em 1em 1em 3em;
   display: block;
   vertical-align: top;
@@ -8094,7 +8094,7 @@ table.table_sprite tr:nth-child(even) {
   clear: both;
 }
 .lightbox_slider_block h3 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   padding: 0.5em 1em;
   margin: 0.5em 0px 0.5em;
   background-color: #e6e3b9;
@@ -10128,8 +10128,24 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
     margin-bottom: 0.5em;
   }
 }
+.cp h2 {
+  font-size: 1.75rem;
+}
+.cp h3 {
+  font-size: 1.5rem;
+}
+.cp h4 {
+  font-size: 1.25rem;
+}
+.cp h5,
+.cp h6 {
+  font-size: 1.125rem;
+}
 .cp table {
   background: #fff;
+}
+.cp table caption {
+  display: none;
 }
 .cp img.float_left {
   float: left;
@@ -10180,7 +10196,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   clear: both;
 }
 .file_download h3 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   padding: 0.5em 1em;
   margin: 0.5em 0px 0.2em;
   background-color: #e6e3b9;
@@ -10463,7 +10479,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   margin: 1em 0;
 }
 .web_link h3 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   padding: 0.5em 1em;
   margin: 0.5em 0px 0.2em;
   background-color: #e6e3b9;
@@ -10901,7 +10917,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   }
 }
 .searchresults_block .leftblock .sortlist .sort_title {
-  background-color: #000;
+  background-color: #7e746e;
   color: #fff;
   padding: 10px;
   text-align: center;
@@ -10939,12 +10955,12 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   font-weight: bolder;
   font-size: 1.063rem;
   margin-bottom: 8px;
-  background-color: #f1efd7;
+  background-color: #e4e2e1;
   padding: 0.2em 0.5em;
 }
 .searchresults_block .leftblock .sortlist .content p {
   line-height: 1.5;
-  padding: 0;
+  padding: 0 0.5em;
   margin: 0 0 10px;
 }
 .searchresults_block .leftblock .sortlist .content .condition {
@@ -11322,7 +11338,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   right: 25px;
 }
 .searchresults_block .rightblock .detailed_group .detailed_information .title {
-  background-color: #000;
+  background-color: #7e746e;
   color: #fff;
   padding: 10px 15px;
   text-align: left;
@@ -11337,19 +11353,21 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   border: none;
 }
 .searchresults_block .rightblock .detailed_group .detailed_information .contentTb table th {
-  background-color: transparent;
+  background-color: #eee;
   border: none;
   border-bottom: 1px solid #ddd;
-  text-align: right;
-  width: 220px;
-  color: #7f4e0f;
+  text-align: left;
+  width: 160px;
+  color: #6a410c;
   white-space: wrap;
   vertical-align: top;
+  line-height: 1.8em;
 }
 .searchresults_block .rightblock .detailed_group .detailed_information .contentTb table td {
   border: none;
   border-bottom: 1px solid #ddd;
   line-height: 1.8em;
+  vertical-align: top;
 }
 .searchresults_block .rightblock .detailed_group .detailed_information .contentTb table td p {
   margin: 0 0 1em;
@@ -11662,6 +11680,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   color: #fff;
   text-align: center;
   position: relative;
+  margin-bottom: 0;
 }
 .stage_block ul li:after {
   content: "";

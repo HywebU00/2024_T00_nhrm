@@ -368,7 +368,7 @@ $(function () {
       $('.searchquery_btn button').addClass('close');
     } else {
       $('.searchgroup').slideUp();
-      $('.searchquery_btn button span').text('顯示查詢');
+      $('.searchquery_btn button span').text('重新查詢');
       $('.searchquery_btn button').removeClass('close');
     }
   });

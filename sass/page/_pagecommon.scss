@@ -79,7 +79,7 @@
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       }
       .sort_title {
-        background-color: #000;
+        background-color: #7e746e;
         color: #fff;
         padding: 10px;
         text-align: center;
@@ -114,12 +114,12 @@
           font-weight: bolder;
           font-size: 1.063rem;
           margin-bottom: 8px;
-          background-color: lighten($color: $lightColor, $amount: 8);
+          background-color: #e4e2e1;
           padding: 0.2em 0.5em;
         }
         p {
           line-height: 1.5;
-          padding: 0;
+          padding: 0 0.5em;
           margin: 0 0 10px;
         }
         .condition {
@@ -500,7 +500,7 @@
       // 詳細資料
       .detailed_information {
         .title {
-          background-color: #000;
+          background-color: #7e746e;
           color: #fff;
           padding: 10px 15px;
           text-align: left;
@@ -513,19 +513,21 @@
           table {
             border: none;
             th {
-              background-color: transparent;
+              background-color: #eee;
               border: none;
               border-bottom: 1px solid #ddd;
-              text-align: right;
-              width: 220px;
-              color: #7f4e0f;
+              text-align: left;
+              width: 160px;
+              color: #6a410c;
               white-space: wrap;
               vertical-align: top;
+              line-height: 1.8em;
             }
             td {
               border: none;
               border-bottom: 1px solid #ddd;
               line-height: 1.8em;
+              vertical-align: top;
               p {
                 margin: 0 0 1em;
                 padding: 0;
@@ -837,6 +839,7 @@
 // 階段性
 .stage_block {
   margin-bottom: 1em;
+
   ul {
     margin: 0;
     padding: 0;
@@ -855,6 +858,7 @@
       color: #fff;
       text-align: center;
       position: relative;
+      margin-bottom: 0;
       &:after {
         content: '';
         border: 30px solid #f1c07e;
