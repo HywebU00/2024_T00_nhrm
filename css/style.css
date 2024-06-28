@@ -10220,7 +10220,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   width: 1em;
   height: 1em;
   position: absolute;
-  top: 0.35em;
+  top: 0.42em;
   left: 0.1em;
   color: #666;
 }
