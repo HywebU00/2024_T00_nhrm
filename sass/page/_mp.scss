@@ -569,8 +569,8 @@ a.more {
     }
     &.R {
       z-index: 3;
-      // width: 478px;
-      width: 378px;
+      width: 478px;
+      // width: 378px;
       height: 437px;
       // right: -100px;
       right: 0px;
@@ -581,11 +581,11 @@ a.more {
       @media (max-width: 1400px) {
         // width: calc(50vw - 600px + 378px);
         // right: calc((50vw - 600px) * -1);
-        width: 378px;
+        width: 478px;
         right: 0;
       }
       @media (max-width: 1200px) {
-        width: 378px;
+        width: 478px;
         right: 0;
       }
       @include screen('mobile') {
@@ -604,7 +604,7 @@ a.more {
         background: url(../images/Butterfly-s-1.png) 50% 50% no-repeat;
         background-size: contain;
         left: 50px;
-        top: 120px;
+        top: 90px;
         transform-origin: bottom center;
         animation: Ani_butterfly-s 12s ease infinite;
       }

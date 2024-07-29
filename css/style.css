@@ -9848,7 +9848,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 .mpbanner_block .flower.R {
   z-index: 3;
-  width: 378px;
+  width: 478px;
   height: 437px;
   right: 0px;
   top: -200px;
@@ -9858,13 +9858,13 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 @media (max-width: 1400px) {
   .mpbanner_block .flower.R {
-    width: 378px;
+    width: 478px;
     right: 0;
   }
 }
 @media (max-width: 1200px) {
   .mpbanner_block .flower.R {
-    width: 378px;
+    width: 478px;
     right: 0;
   }
 }
@@ -9883,7 +9883,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   background: url(../images/Butterfly-s-1.png) 50% 50% no-repeat;
   background-size: contain;
   left: 50px;
-  top: 120px;
+  top: 90px;
   transform-origin: bottom center;
   animation: Ani_butterfly-s 12s ease infinite;
 }
