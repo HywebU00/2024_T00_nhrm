@@ -518,13 +518,16 @@ a.more {
   .container {
     padding: 0 !important;
     position: relative;
+    width: 100%;
+    max-width: 100%;
   }
   .mpbanner_group {
     height: 400px;
-    background-image: url('../images/bg2.jpg');
+    background-image: url('../images/bg3.jpg');
     background-repeat: no-repeat;
     background-position: center bottom;
     background-attachment: fixed;
+    background-size: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -538,7 +541,7 @@ a.more {
       height: 100%;
       left: 0;
       top: 0;
-      background: rgba(0, 0, 0, 0.25);
+      background: rgba(0, 0, 0, 0.2);
       z-index: 1;
     }
     .title {
@@ -547,6 +550,9 @@ a.more {
       position: relative;
       z-index: 3;
       line-height: 1em;
+      @media (max-width: 480px) {
+        font-size: 2.5em;
+      }
     }
   }
   .flower {
@@ -563,16 +569,20 @@ a.more {
     }
     &.R {
       z-index: 3;
-      width: 478px;
+      // width: 478px;
+      width: 378px;
       height: 437px;
-      right: -100px;
+      // right: -100px;
+      right: 0px;
       top: -200px;
       background-image: url('../images/flow_R.png');
       background-repeat: no-repeat;
       background-position: left top;
       @media (max-width: 1400px) {
-        width: calc(50vw - 600px + 378px);
-        right: calc((50vw - 600px) * -1);
+        // width: calc(50vw - 600px + 378px);
+        // right: calc((50vw - 600px) * -1);
+        width: 378px;
+        right: 0;
       }
       @media (max-width: 1200px) {
         width: 378px;
@@ -644,6 +654,19 @@ a.more {
     100% {
       transform: rotate3d(1, 1, 1, 0deg);
       left: 50px;
+    }
+  }
+  .flowercircle {
+    background-image: url('../images/flow_circle.png');
+    background-repeat: no-repeat;
+    background-position: left top;
+    width: 350px;
+    height: 452px;
+    position: absolute;
+    right: 0;
+    top: -220px;
+    @include screen('mobile') {
+      display: none;
     }
   }
 }
